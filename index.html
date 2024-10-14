@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./script.js" defer></script>
+    <title>Table List</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: capitalize;
+        background-color: #212121;
+        color: white;
+      }
+     
+      .firstHeading {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+      .conatiner {
+        background-color: #000;
+        padding: 100px;
+        border: none;
+        border-radius: 20px;
+      }
+
+      #verticleLine{
+        border-left: 1px solid #fff;
+        height:20vh;
+      }
+      .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #btnAddName, #addSureName{
+        padding: 6px 10px;
+        font-weight: 600;
+        margin-bottom: 10px; 
+        border: none;
+      }
+      .listGap{
+        margin-top: 10px;
+      }
+
+      @media(max-width: 800px){
+        .row{
+            flex-direction: column;
+        }
+        #verticleLine{
+            display: none;
+        }
+        .col-1{
+            padding-bottom: 30px;
+        }
+        .conatiner{
+            padding: 50px;
+            margin: 0 20px;
+        }
+        .firstHeading{
+            text-align: center;
+            font-size: 25px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="conatiner">
+      <h1 class="firstHeading">Table List using js</h1>
+
+      <div class="row">
+        <div class="col-1">
+          <button id="btnAddName">Add Name</button>
+          <table class="tableInfo-1">
+            <thead>
+              <tr>
+                <th style="margin-bottom: 10px;">First Name</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody">
+
+            </tbody>
+          </table>
+        </div>
+        <div class="col-2" id="verticleLine"></div>
+
+        <div class="col-3">
+          <button id="addSureName">Add Sure</button>
+          <table class="tableInfo-2">
+            <thead>
+              <tr>
+                <th>Last Name</th>
+              </tr>
+            </thead>
+
+            <tbody id="tableBody-2">
+
+            </tbody>
+
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
